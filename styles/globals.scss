@@ -1,0 +1,186 @@
+// COLORS
+
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+// IMPORTS
+@import "./settings.scss";
+@import "./pages/home.scss";
+@import "./pages/about.scss";
+@import "./pages/services.scss";
+@import "./pages/pricing.scss";
+@import "./pages/contact.scss";
+@import "./components/navigation.scss";
+@import "./components/footer.scss";
+@import "./components/card.scss";
+@import "./components/branding.scss";
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-size: $font-med;
+  background: $white;
+  overflow-x: hidden;
+}
+section {
+  height: auto;
+  min-height: calc(100vh - (#{$navigation-height} + #{$footer-height}));
+  width: 100vw;
+}
+div {
+  // position: "absolute";
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  // margin: 0;
+  // padding: 0;
+}
+
+p {
+  font-size: 20px;
+}
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: $l-size 0 $s-size 0;
+}
+h1 {
+  font-size: 44px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 36px;
+}
+h4 {
+  font-size: 32px;
+}
+
+.__textarea,
+.__input,
+.__button {
+  width: $desktop-breakpoint;
+  height: 45px;
+  border: none;
+  padding: 0 $m-size;
+  border-radius: 3px;
+}
+
+.__input {
+  text-align: left;
+}
+.__textarea {
+  padding: $s-size;
+  height: 200px;
+  resize: none;
+}
+.form___label_text {
+  font-weight: bold;
+  margin: $s-size 0;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - (#{$navigation-height} + #{$footer-height}));
+  height: auto;
+  margin: 0;
+  padding: 0 $l-size;
+}
+.copy__container {
+  margin: $m-size auto;
+  text-align: left;
+}
+.copy__bold_p {
+  font-weight: bold;
+}
+.__container {
+  width: $desktop-breakpoint;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: $l-size;
+}
+
+// SCROLLBAR
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $white transparent;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: transparentize($red, 0.3);
+  border-radius: 20px;
+  border: transparent;
+}
+@media only screen and (max-width: $desktop-breakpoint) {
+  p {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: $m-size 0 $s-size 0;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 34px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: calc(
+      100vh - (#{$navigation-height-mobile} + #{$footer-height})
+    );
+    height: auto;
+    width: 90vw;
+    padding: 0 10vw;
+    margin: 0 auto;
+  }
+  .__container {
+    display: flex;
+    width: 100%;
+    margin: $l-size;
+  }
+  .__input,
+  .__textarea,
+  .send__message_button {
+    width: 80vw;
+  }
+}

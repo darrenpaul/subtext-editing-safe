@@ -1,0 +1,23 @@
+.footer__container {
+  background: none;
+  height: $footer-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer__text {
+  font-size: 14px;
+}
+.social__links {
+  display: flex;
+}
+.social__link {
+  margin: 0 $m-size;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: $desktop-breakpoint) {
+  .footer__container {
+    font-size: 12px;
+  }
+}

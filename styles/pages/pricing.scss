@@ -1,0 +1,12 @@
+.pricing__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: calc(100vh - (#{$navigation-height} + #{$footer-height}));
+  height: auto;
+  margin: $l-size 0 0 0;
+}
+.information__items {
+  margin: 0 $l-size;
+}

@@ -1,0 +1,22 @@
+.home__image_container {
+  height: auto;
+  img {
+    height: 640px;
+    overflow: hidden;
+  }
+}
+.home__title_container {
+  width: 100%;
+}
+@media only screen and (max-width: $desktop-breakpoint) {
+  .home__image_container {
+    height: auto;
+    img {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 1000px;
+      height: 300px;
+    }
+  }
+}
